@@ -9,6 +9,18 @@
 	</head>
 	<body>
 		<h1>Accessible Modal</h1>
+		<p>
+			Simple modal pattern that follows guidlelines from the
+			<a
+				href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+				target="_blank"
+				>W3C</a
+			>. This uses the
+			<a href="https://www.npmjs.com/package/focus-trap"
+				>focus-trap npm package</a
+			>
+			to trap focus within the modal.
+		</p>
 		<button class="modalTrigger" data-modal="my-modal">Open Modal</button>
 		<!-- Example Modal -->
 		<div class="modal" id="my-modal" aria-hidde="true">
@@ -18,9 +30,10 @@
 					role="dialog"
 					aria-modal="true"
 					aria-labelledby="my-modal-title"
+					aria-describedby="my-modal-description"
 				>
 					<h2 id="my-modal-title">Modal Title</h2>
-					<p>
+					<p id="my-modal-description">
 						Nullam id dolor id nibh ultricies vehicula ut id elit.
 						Maecenas sed diam eget risus varius blandit sit amet non
 						magna. Vivamus sagittis lacus vel augue laoreet rutrum
